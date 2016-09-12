@@ -1,0 +1,20 @@
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>框架标签index</title>
+</head>
+<!-- 框架标签是唯一和body标签互斥的标签（把body删除） -->
+<frameset rows="30%,70%"> <!-- frameset：定义一个框架
+							   rows：分成两行，分别占30%或70%,也可以写像素值
+							   cols：将框架按着列分割（竖着分） -->
+							   
+	<frame src="Day01-09-框架标签top.html" noresize="noresize" frameborder="0"/> <!-- frame：指定框架的页面 
+																					nosize：不能再调整框架大小，html中属性值和键相同时可简写
+																					frameborder：取0或1（默认）-->
+	<frameset cols="30%,*"> <!-- *会自动计算 -->
+		<frame src="Day01-09-框架标签left.html" noresize/> <!-- src：指定显示页面的路径 -->
+		<frame src="Day01-09-框架标签main.html" name="main" noresize scrolling="auto"/> <!-- name：框架名称 
+																						 scrolling：是否显示滚动条，yes/no/auto-->
+	</frameset>
+</frameset>
+</html>

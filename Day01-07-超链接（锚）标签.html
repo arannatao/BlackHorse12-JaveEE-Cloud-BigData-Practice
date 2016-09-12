@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>超链接标签</title>
+</head>
+<body>
+	<!-- <a>标签的属性：
+		href：跳转的资源名或锚点名称
+		name：定义锚点时，指定锚点名称
+		target：资源跳转时，1>该属性不指定，在当前页面打开；2>_blank，在空白页打开	
+	 -->
+	 
+	<a name="top"></a>
+	<a href="http://www.baidu.com">百度</a><br/> <!-- a标签：anchor锚-->											
+	<a href="Day01-06-图形标签.html" target="_blank">图形标签</a><br/><!-- 1.超链接:点击后跳转到指定页面， 格式：协议名（多种）+资源 
+							  					                       协议如：http（常用，默认，可以使用相对路径）、mailto、thunder、QQ、旺旺等-->
+	<a href="mailto:xxx@163.com">联系我们</a><br/>
+	<a href="thunder://EF16EA123123">点击下载</a><br/> 
+												  
+	<img src="0.jpg" alt="smile!"/ title="smile~" height="500">
+	<img src="0.jpg" alt="smile!"/ title="smile~" height="500">
+	<a name="middle"></a>
+	<img src="0.jpg" alt="smile!"/ title="smile~" height="500">
+	<img src="0.jpg" alt="smile!"/ title="smile~" height="500"><br/>
+	<a href="#middle">回到中间</a>&nbsp;&nbsp;<a href="#top">回到顶部</a>
+												  <!-- 2.锚：在当前页面中跳转，如回到顶部 
+													            先在页面最上面做一个锚标记,name="锚点名称"
+													            再用href="#锚点名称"跳转到锚标记-->											         												          
+</body>
+</html>

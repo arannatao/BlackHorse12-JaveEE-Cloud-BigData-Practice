@@ -1,0 +1,22 @@
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>转义字符——静夜思</title>
+</head>
+<body>
+	<h3>静夜思</h3>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;李白<br/>
+																		<!-- &nbsp;英文空格 -->
+	床前明月光，<br/>
+	疑是地上霜。<br/>
+	举头望明月，<br/>
+	低头思故乡。<br/>
+
+	<hr/>
+	1<3>2, <!-- 标签不以数字开头 -->
+	a<b>c, <!-- 标签不完整，但还是解析成了标签 -->
+	a&lt;b&gt;c <!-- &lt;小于号  &gt;大于号 -->
+	<br/>
+	&amp;,&quot;,&reg;,&copy;,&trade; <!-- 分别为&、引号"、已注册®、版权©、商标™ -->
+</body>
+</html>
