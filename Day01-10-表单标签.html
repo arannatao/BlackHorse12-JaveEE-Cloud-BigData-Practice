@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>表格标签</title>
+</head>
+<body>
+<form action="#" method="post"> <!-- form：表单标签，包裹要提交的内容。
+					   				 action属性：决定表单提交到哪里（服务器），#为当前页面
+					   				 method属性：决定表单的提交方式 get(默认值)/post
+					   			  	 post的键值对没有加在地址栏上，放在http请求正文中；安全性更高一些；理论上长度是无限的，而get的长度受限2K/2M等) -->
+	<table border="1"> 
+		<tr> 
+			<td colspan="3" align="center"><b>用户注册</b></td> 
+		</tr>
+		<tr>
+			<td>用户名：</td>
+			<td><input type="text" name="name" /></td> <!-- input是自闭合标签，name属性一定要写（提交时键值对的键） 
+															text：文本框-->
+		</tr>
+		<tr>
+			<td>密码：</td>
+			<td><input type="password" name="password" /></td> <!-- password：密码框 -->
+		</tr>
+		<tr>
+			<td>性别：</td>
+			<td>男<input type="radio" name="sex" value="1" />女<input type="radio" name="sex" value="0" /></td> <!-- radio：单选框，它和多选框这类不能输入的，还要指定值
+																														      一个radio为一个框，加文字说明是哪个，一般男1女0 -->
+		</tr>
+		<tr>
+			<td>爱好：</td>
+			<td>工作<input type="checkbox" name="habit" value="working" />读书<input type="checkbox" name="habit" value="reading" />睡觉<input type="checkbox" name="habit" value="sleeping" /></td> <!-- checkbox：多选框 -->
+		</tr>
+		<tr>
+			<td>学历：</td>
+			<td>
+				<select name="edu"> <!-- select：下拉列表，初始显示第一项 -->
+					<option value="00">---请选择学历---</option>
+					<option value="01">高中</option>
+					<option value="02">本科</option>
+					<option value="03">硕士</option>
+					<option value="04">博士</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>上传照片：</td>
+			<td><input type="file" name="photo"/></td> <!-- file：文件上传 -->
+		</tr>
+		<tr>
+			<td>个人描述：</td>
+			<td><textarea name="desc" cols="50" rows="10">这家伙很懒，什么都没有留下...</textarea></td> 
+			<!-- textarea：多行文本框 ，cols和rows指定文本框的列数和行数。和前面的不同，textarea没有value属性，默认内容填写在标签之间 -->
+																												
+		</tr>		
+		<tr>
+			<td colspan="2" align="center"><input type="submit" value="提交" />&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" /></td>
+			<!-- 设置两个按钮，不写用默认value值。提交后url后多了以?开头用&连接的键值对，重置则为还原表单初始状态（用的少） -->
+		</tr>
+		
+		<!-- form的其它一些属性： -->
+		<tr>
+			<td>隐藏域：</td>
+			<td><input type="hidden" name="serect" value="haha" /></td> <!-- 但可以提交，用于不需要用户填写但服务器要用到的内容 -->
+		</tr>
+		<tr>
+			<td>其它：</td>
+			<td><input type="image"/></td> <!-- image：图片形式的提交按钮。有了CSS之后，美化系列标签（如还有<font>等）就很少用了（没写完） -->
+		</tr>
+		<!-- 
+			input标签：表单项标签
+				type属性：button按钮（需要配合JS使用）
+				name属性：
+					对于表单项：提交时键值对的键
+				value属性:
+					1>对于需要提交的表单项：提交时键值对的值
+					2>按钮类型的：按钮上显示的文字
+				readonly属性：
+					只读属性，键和值一样。只是限制value属性的变化。参与提交。
+					只能给text和 password使用。textarea也有这个属性。
+				disabled属性：
+					禁用。颜色变灰。不参与提交（url中也就不显示了）。
+					所有input都可以使用。
+				checked属性：
+					默认被选中。只适用于radio和checkbox。
+				maxlength属性：定义最大长度。
+				size属性：定义输入框的显示长度。
+					以上两个属性只能放在 text和 password中。
+			select标签：下拉选		
+				name属性：提交的键
+				size属性：同时显示的选项个数
+				multiple属性：变成多选
+				selected属性：让option默认被选中
+			textarea标签：文本域
+				name属性：提交的键
+				col属性：列 宽
+				row属性：行 高
+				readonly属性：只读
+		 -->
+	</table>
+</form> <!-- 按着Alt不放+上/下箭头可把该行往上/下移 -->
+</body>
+</html>
