@@ -1,10 +1,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-	<title>表格标签</title>
+	<title>表单标签</title>
 </head>
 <body>
-<form action="#" method="post"> <!-- form：表单标签，包裹要提交的内容。
+<form action="#" method="get"> <!-- form：表单标签，包裹要提交的内容。
 					   				 action属性：决定表单提交到哪里（服务器），#为当前页面
 					   				 method属性：决定表单的提交方式 get(默认值)/post
 					   			  	 post的键值对没有加在地址栏上，放在http请求正文中；安全性更高一些；理论上长度是无限的，而get的长度受限2K/2M等) -->
@@ -33,7 +33,7 @@
 		<tr>
 			<td>学历：</td>
 			<td>
-				<select name="edu"> <!-- select：下拉列表，初始显示第一项 -->
+				<select name="edu" multiple> <!-- select：下拉列表，初始显示第一项 -->
 					<option value="00">---请选择学历---</option>
 					<option value="01">高中</option>
 					<option value="02">本科</option>
@@ -82,14 +82,14 @@
 					所有input都可以使用。
 				checked属性：
 					默认被选中。只适用于radio和checkbox。
-				maxlength属性：定义最大长度。
+				maxlength属性：定义可输入的最大长度。
 				size属性：定义输入框的显示长度。
 					以上两个属性只能放在 text和 password中。
 			select标签：下拉选		
 				name属性：提交的键
 				size属性：同时显示的选项个数
 				multiple属性：变成多选
-				selected属性：让option默认被选中
+				selected属性：让该option默认被选中
 			textarea标签：文本域
 				name属性：提交的键
 				col属性：列 宽
