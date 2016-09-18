@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>盒子模型03-内外边距的复合属性</title>
+	<style type="text/css">
+		div{
+			/*
+			border-color:red; 
+			border-width:1px;
+			border-style:solid; 
+			*/
+			border:2px solid red;
+			width:200px;
+			height:200px;
+		}
+		
+		#one{
+			/*
+			1个属性时: 4个方向
+			2个属性时: 第一个决定上下，第2个决定左右
+			3个属性时: 上   左右  下
+			4个属性时: 上 右 下 左(顺时针)
+			*/
+			padding:10px 30px;
+		}
+	</style>
+</head>
+<body>
+	<div id="one">
+		<div id="two">
+		
+		</div>
+	</div>
+</body>
+</html>

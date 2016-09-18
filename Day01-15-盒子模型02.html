@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>盒子模型02-div嵌套</title>
+	<style type="text/css">
+		div{
+			border-color:red; 
+			border-width:1px;
+			border-style:solid; /* 边框的颜色，宽度和样式(实线) */
+		}
+		
+		#one{
+			width:300px;
+			height:300px; /* 设置块的宽和高 */
+			padding-left:100px; /* 内边距：外面div到里面div的距离。
+										   并没有移动里面的块，而是把自己（外面的块）向左加长了100px，需在width减100px */
+		}
+		#two{
+			width:100px;
+			height:100px;
+			/* margin-left:100px; /* 外边距：里面div到外面div的距离。效果与padding（会改变自身的宽高）不同。 */
+		}
+	
+	</style>
+</head>
+<body>
+	<div id="one">
+		<div id="two">
+		
+		</div>
+	</div>
+</body>
+</html>
