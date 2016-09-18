@@ -1,0 +1,24 @@
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>常见属性01——字体</title>
+	<style type="text/css">
+		p{
+			font-size:100px; /* CSS中字体大小无限制，HTML中是1-7 */
+			font-family:黑体; /* 字体 */
+			font-style:italic;/* 斜体等 */
+			font-weight:100;/* 加粗 */
+			line-height:10px; /* 行高 */
+			font-variant:small-caps;/* 异形字，让小写字母以大写的形式、小写的大小显示 */
+		}
+		
+		#one{
+			font:italic small-caps 900 100px 黑体; /* 复合属性，一个属性多个属性值，以空格连接，没有的属性不写即可 */
+		}
+	</style>
+</head>
+<body>
+	<p>hao好学习，天天向上</p>
+	<h1 id="one">好好学习，天天向上</h1>
+</body>
+</html>
