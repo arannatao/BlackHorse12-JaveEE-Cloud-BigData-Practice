@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Function对象02——调用</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function fun1(a, b){
+			alert(a+b);
+		}
+		//JS中函数的调用只看函数的名称，不看参数列表
+		fun1(1, 2); //3
+		fun1(1, 2, 3); //3 只取前两个参数
+		fun1(); //NaN a和b都没初始化，是undefined，转换类型成NaN
+		
+		//函数中的内置对象arguments（函数运行时的实际参数列表），不用声明不用创建，直接用
+		function fun2(){
+			alert(arguments.length); //实际参数个数
+			alert(arguments[0]); //第一个参数
+		}
+		fun2(); //0 undefined
+		fun2(1, 2); //2 1 
+		fun2(1, 2, 3); //3 1
+		
+		//JS中函数的重载（利用arguments实现）
+		function fun3(){
+			alert("aaa");
+		}
+		function fun3(a){
+			alert("bbb");
+		}                
+		fun3(); //bbb 这不是重载，是对象的覆盖
+		
+		function fun4(){
+			if(arguments.length == 2){
+				alert(arguments[0]+arguments[1]);
+			}
+			else if(arguments.length == 3){
+				alert(arguments[0]+arguments[1]-arguments[2]);
+			}
+		} //重载
+		fun4(1, 2); //3
+		fun4(1, 2, 3); //0
+	</script>
+</body>
+</html>

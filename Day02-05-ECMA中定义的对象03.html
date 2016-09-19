@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Function对象03——函数的返回</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function fun1(){}
+		alert(fun1()); //undefined 函数没有显示指定返回值，函数返回值为undefined
+		
+		function fun2(a, b){
+			//alert("fun2");
+			return a+b; //使用return关键字,返回内容。
+		}
+		alert(fun2(1, 2)); //3
+		
+		function fun3(){
+			alert("aaa");
+			return ; //return关键字也可以作为结束方法运行的功能
+			alert("bbb");
+		}
+		fun3();
+		
+		alert(void(fun2(1, 2))); //undefined void运算符用来拦截函数返回值，主要用于下面的<a>标签
+		
+	</script>
+		
+		<a href="javaScript:alert('aaa')">点我1</a> <!-- 点击超链接显示aaa -->
+		<a href="javaScript:fun2(2,3)">点我2</a> <!-- 认为函数的返回值是新页面的内容，跳转到新页面显示5 -->
+		<a href="javaScript:void(fun2(2,3))">点我3</a> <!-- 不让返回值干扰页面，不跳转 -->
+		<a href="javaScript:void(0)">点我4</a> <!-- 点了没反应。作用是当<a>标签附加上事件时，
+												       不会和<a>标签本来的功能产生冲突，否则会先执行href对应的 -->
+</body>
+</html>

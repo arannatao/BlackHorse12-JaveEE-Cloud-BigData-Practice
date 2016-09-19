@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Function对象01——创建</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//Java中方法（函数）：public void fun(){}
+		//JS中：function fun(){} 但严格意义上来说它并不是一个方法，而是一个对象
+							   //特殊之处就是像Java中的方法一样，可以执行
+							   
+		//以下两点证明function是一个对象
+		function fun(){
+			alert("aaa");
+		}
+		alert(fun1.toString()); //1.可以调用函数对象的toString方法，警告框里显示fun1完整定义的代码段
+		
+		//2.JS中函数对象的创建方式（JS定义函数时没有定义返回值类型这一项）
+		//方式1：函数对象的构造方法中，最后一个参数是定义函数的体，之前所有的参数都是定义函数的参数。（不常用）
+		var fun1 = new Function("a", "b", "alert(a+b);");
+		var fun1 = new Function("a, b", "alert(a+b);");//效果都一样。如果只有一个参数，就是函数体。
+		
+		//方式2：1和3的结合
+		var fun3 = function (a,b){
+			alert(a+b);
+		}
+		
+		//方式3（最常用）
+		function fun2(a, b){
+			alert(a+b);
+		}
+		
+		//观察如下代码，查看是否有问题
+		function a(a, b){
+			alert(a+b);
+		}
+		var a = 1; //问题：两个变量名一样了，JS中不会报错，下面的覆盖上面的，最终a是number类型的
+		var b = 2;
+		a(a, b); //错误，无打印
+		
+	</script>
+</body>
+</html>
