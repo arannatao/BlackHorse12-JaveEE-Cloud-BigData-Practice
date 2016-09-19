@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Global对象</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//URI是从虚拟根路径开始的，URL是整个链接
+		var url = "http://www.baidu.com?name=张三" //HTTP协议是不支持传输中文的，注意记得处理
+		//如果在JS中需要模拟提交或是跳转到某一个网址并且携带参数，需要自己拼装后面的字符串
+		
+		alert(encodeURI(url)); //前面没有对象和"." 只编码汉字
+		//UTF-8==>1个汉字变成3个16进制数  GBK==>1个汉字变成4个16进制数  1个16进制数FF==>1字节
+		var url2 = encodeURI(url);
+		alert(decodeURI(url2)); //张三
+
+		alert(encodeURIComponent(url)); //汉字和敏感符号都被编码
+		//当提交的值中包含一些url中的敏感符号(: /等)时,如name=?张/三，把它单独编码然后把拼装到url里面
+		
+		alert(isNaN(NaN)); //true 因为用下面的==运算符无法判断一个值是否是NaN
+		alert(NaN == NaN); //false
+	
+		var str1 = "123";
+		alert(+str1); //123
+		alert(new Number(str1)); //123
+		alert(parseInt(str1)); //123
+		alert(typeof parseInt(str1)); //number 
+		/*把字符串转换成整数，三种转换方式，但对比var1、var2、var3不同字符串的情况
+		区别：1、2两种转换属于将字符串整体进行转换。如果字符串中包含1个或以上转换不了的字符，返回NaN。
+		   	 第3种从左到右依次转换，直到遇到不能转换的值时停止。*/
+
+		var str2 = "123abc";
+		alert(+str2); //NaN
+		alert(new Number(str2)); //NaN
+		alert(parseInt(str2)); //123
+		alert(typeof parseInt(str2)); //number
+		
+		var str3 = "abc123"; //三种都是NaN
+		
+		var str4 = "3.1415.9265357";
+		alert(parseInt(str4)); //3 遇到了"."不再转，所以转整数是全舍
+		alert(parseFloat(str4)); //3.1415 转换成浮点数，与parseInt()一样，区别是支持转换小数。
+
+	</script>
+</body>
+</html>
