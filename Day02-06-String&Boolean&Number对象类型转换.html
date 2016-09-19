@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>String&Boolean&Number对象——类型转换</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//利用3大包装类的构造函数进行类型转换
+		
+		var b1 = new Boolean("abc"); // String ==> Boolean
+		
+		var str1 = new String(true); //Boolean ==> String
+	
+		var num1 = new Number("123"); //String ==> Number
+		
+		var str2 = new String(123); // Number ==> String
+		
+		//运算符
+		alert(num1 instanceof Number); //true instanceof运算符用来判断属于哪种对象
+		alert(num1 instanceof Object); //true
+		alert(typeof num1); //object typeof运算符是判断原始数据类型的，这里只能判断出它是对象
+		alert(num1 instanceof String); //false
+
+	</script> 
+</body>
+</html>;
