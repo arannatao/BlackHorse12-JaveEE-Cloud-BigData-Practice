@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>JS中的运算符03——比较运算符</title>
+	<script type="text/javascript">
+		alert(11 > 3); //true
+		alert("11" > 3); //true 其实还是11>3。当运算符两端一端是数字一端是其他类型时，其他类型会自动向数字类型转换。
+		alert(11 > "3"); //true
+		
+		alert("abc" > 11); //false "abc"转数字是NaN
+		
+		alert("11" > "3"); //false 1的ASI码小于3。字符串在进行比较时，规律是:比较首字符ASI码，如果一样，比较第2位...
+		alert("11" > "1"); //true 
+		
+		//另有：数学、等性、赋值、条件运算符
+	</script>
+</head>
+<body>
+
+</body>
+</html>

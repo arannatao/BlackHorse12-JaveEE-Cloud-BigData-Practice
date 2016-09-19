@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>JS中的运算符01</title>
+	<script type="text/javascript">
+		//var i = 1;
+		//alert(i++); //1，和Java中都一样
+		//alert(++i); //3
+		//alert(i--); //3
+		//alert(--i); //1
+		
+		var a = +1;
+		var b = -1;
+		var c = +"123"; //123（-"123"返回-123），这样写是在进行类型转换,变成数字类型
+		alert(typeof c);
+		alert(c);
+		var d = +"abc"; //还是会进行类型转换，但转换失败，返回number类型中的特殊值NaN
+		alert(typeof d);
+		alert(d);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
